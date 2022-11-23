@@ -3,19 +3,23 @@
 import 'package:flutter/material.dart';
 
 class DropDownFlow extends StatelessWidget {
+  DropDownFlow({this.hintText = ''});
+  final String hintText;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
+        SizedBox(
           height: 48,
           width: 366,
           child: DropdownButtonFormField<String>(
             icon: Icon(Icons.keyboard_arrow_down_rounded),
             decoration: InputDecoration(
-              hintText: 'Category',
-              border: OutlineInputBorder(),
+              hintText: hintText,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
             ),
             onTap: () {},
             items: [
@@ -33,7 +37,6 @@ class DropDownFlow extends StatelessWidget {
               ),
             ],
             onChanged: (value) {},
-            borderRadius: BorderRadius.circular(10),
           ),
         )
       ],

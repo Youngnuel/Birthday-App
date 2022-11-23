@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'components/primarybutton.dart';
@@ -63,20 +64,33 @@ class _PersonalSettingsState extends State<PersonalSettings> {
             child: Column(
               children: [
                 SizedBox(height: 33),
-                Container(
-                  height: 112,
-                  width: 112,
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Color(0xffA4E1DA),
-                      ),
-                      shape: BoxShape.circle,
-                      color: Color(0xffC4C4C4)),
-                  child: CircleAvatar(
-                    radius: 104,
-                    backgroundImage: AssetImage('images/smartboy.JPG'),
+                Stack(alignment: Alignment.bottomRight, children: [
+                  Container(
+                    height: 112,
+                    width: 112,
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Color(0xffA4E1DA),
+                        ),
+                        shape: BoxShape.circle,
+                        color: Color(0xffC4C4C4)),
+                    child: CircleAvatar(
+                      radius: 104,
+                      backgroundImage: AssetImage('images/smartboy.JPG'),
+                    ),
                   ),
-                ),
+                  Container(
+                    height: 36,
+                    width: 36,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Color(0xff17DBA7)),
+                    child: Icon(
+                      CupertinoIcons.camera,
+                      color: Color(0xffFFFFFF),
+                      size: 20,
+                    ),
+                  ),
+                ]),
                 SizedBox(height: 42),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

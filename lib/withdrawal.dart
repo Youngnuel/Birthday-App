@@ -1,11 +1,30 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:birthday_app/withdrawal_processing.dart';
 import 'package:flutter/material.dart';
 
+import 'components/dropdownflow.dart';
 import 'components/primarybutton.dart';
+import 'components/primarytextfield.dart';
 
-class Withdrawal extends StatelessWidget {
+class Withdrawal extends StatefulWidget {
   static const id = 'withdrawal';
+
+  @override
+  State<Withdrawal> createState() => _WithdrawalState();
+}
+
+class _WithdrawalState extends State<Withdrawal> {
+  final amountController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    amountController.dispose();
+    passwordController.dispose();
+
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +79,7 @@ class Withdrawal extends StatelessWidget {
                         Row(
                           children: [
                             SizedBox(width: 16),
-                            Stack(children: [
+                            Stack(alignment: Alignment.center, children: [
                               SizedBox(
                                 height: 64,
                                 width: 66,
@@ -69,6 +88,8 @@ class Withdrawal extends StatelessWidget {
                                 ),
                               ),
                               Image(
+                                height: 32,
+                                width: 32,
                                 image: AssetImage('images/withdraw.png'),
                               )
                             ]),
@@ -108,6 +129,7 @@ class Withdrawal extends StatelessWidget {
                 SizedBox(height: 12),
                 Container(
                   width: double.infinity,
+                  height: 62,
                   decoration: BoxDecoration(
                     border: Border.all(width: 0.5, color: Color(0xffC5D0CE)),
                     color: Color(0xffFFFFFF),
@@ -124,33 +146,80 @@ class Withdrawal extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 16),
-                      RichText(
-                        text: TextSpan(
-                            text:
-                                'Your funds will be sent to your Zenith Bank (Brown Samson Dappa, 2081896093).',
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Color(0xff2C3149),
-                              fontWeight: FontWeight.w400,
-                              fontStyle: FontStyle.normal,
-                            ),
-                            children: [
-                              TextSpan(
-                                text: ' Tap to change',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w700,
-                                  color: Color(0xff17DBA7),
-                                ),
+                      Expanded(
+                        child: RichText(
+                          text: TextSpan(
+                              text:
+                                  'Your funds will be sent to your Zenith Bank (Brown Samson Dappa, 2081896093).',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Color(0xff2C3149),
+                                fontWeight: FontWeight.w400,
+                                fontStyle: FontStyle.normal,
                               ),
-                            ]),
+                              children: [
+                                TextSpan(
+                                  text: ' Tap to change',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                    color: Color(0xff17DBA7),
+                                  ),
+                                ),
+                              ]),
+                        ),
                       )
                     ],
                   ),
                 ),
-                SizedBox(height: 98),
-                PrimaryButton(title: 'WITHDRAWAL', tapMe: () {}),
-                SizedBox(height: 32)
+                SizedBox(height: 93),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Amount to withdraw (N2,000  Minimum)',
+                      style: TextStyle(
+                        color: Color(0xff17DBA7),
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    SizedBox(height: 12),
+                    PrimaryTextfield(
+                      controller: amountController,
+                      keyboardType: TextInputType.number,
+                    ),
+                    SizedBox(height: 24),
+                    Text(
+                      'Select event  you are withdrawing for',
+                      style: TextStyle(
+                        color: Color(0xff17DBA7),
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    SizedBox(height: 12),
+                    DropDownFlow(),
+                    SizedBox(height: 24),
+                    Text(
+                      'Enter Password',
+                      style: TextStyle(
+                        color: Color(0xff17DBA7),
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    SizedBox(height: 12),
+                    PrimaryTextfield(
+                      controller: passwordController,
+                      hidetext: true,
+                    ),
+                    SizedBox(height: 72),
+                    PrimaryButton(
+                        title: 'WITHDRAWAL',
+                        tapMe: () {
+                          Navigator.pushNamed(context, WithdrawalProcessing.id);
+                        }),
+                    SizedBox(height: 32)
+                  ],
+                ),
               ],
             ),
           ),

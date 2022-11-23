@@ -343,7 +343,9 @@ class _CreateEventState extends State<CreateEvent> {
                       ),
                     ),
                     SizedBox(height: 12),
-                    DropDownFlow(),
+                    DropDownFlow(
+                      hintText: 'Category',
+                    ),
                     SizedBox(height: 24),
                     Text(
                       'Target amount',

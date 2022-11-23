@@ -1,8 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:birthday_app/account.dart';
+import 'package:birthday_app/account_details_added.dart';
 import 'package:birthday_app/account_settings.dart';
 import 'package:birthday_app/active_event_page.dart';
+import 'package:birthday_app/bank_setup.dart';
+import 'package:birthday_app/bank_setup_verification.dart';
 import 'package:birthday_app/change_password.dart';
 import 'package:birthday_app/create_account.dart';
 import 'package:birthday_app/dashboard.dart';
@@ -16,6 +19,7 @@ import 'package:birthday_app/otp_page.dart';
 import 'package:birthday_app/login_page.dart';
 import 'package:birthday_app/personal_settings.dart';
 import 'package:birthday_app/withdrawal.dart';
+import 'package:birthday_app/withdrawal_processing.dart';
 import 'package:flutter/material.dart';
 import 'onboarding.dart';
 
@@ -56,6 +60,10 @@ class _BirthdayAppState extends State<BirthdayApp> {
         ChangePassword.id: (context) => ChangePassword(),
         ErrorPage.id: (context) => ErrorPage(),
         Withdrawal.id: (context) => Withdrawal(),
+        WithdrawalProcessing.id: (context) => WithdrawalProcessing(),
+        BankSetup.id: (context) => BankSetup(),
+        BankSetupVerfication.id: (context) => BankSetupVerfication(),
+        AccountDetailsAdded.id: (context) => AccountDetailsAdded(),
       },
     );
   }

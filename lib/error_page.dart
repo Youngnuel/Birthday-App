@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:birthday_app/bank_setup.dart';
 import 'package:birthday_app/withdrawal.dart';
 import 'package:flutter/material.dart';
 
@@ -73,7 +74,7 @@ class ErrorPage extends StatelessWidget {
                 PrimaryButton(
                     title: 'SETUP BANK DETAILS',
                     tapMe: () {
-                      Navigator.pushNamed(context, Withdrawal.id);
+                      Navigator.pushNamed(context, BankSetup.id);
                     }),
                 SizedBox(height: 32)
               ],

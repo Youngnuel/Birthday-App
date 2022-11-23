@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:birthday_app/account_settings.dart';
+import 'package:birthday_app/bank_setup.dart';
 import 'package:birthday_app/error_page.dart';
 import 'package:flutter/material.dart';
 
@@ -148,7 +149,10 @@ class Account extends StatelessWidget {
                               ),
                               SizedBox(width: 50),
                               IconButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pushNamed(
+                                      context, AccountSettings.id);
+                                },
                                 iconSize: 24,
                                 icon: Icon(
                                   Icons.arrow_forward,
@@ -186,7 +190,7 @@ class Account extends StatelessWidget {
                   SizedBox(height: 8),
                   AccountTabs(
                     tapMe: () {
-                      Navigator.pushNamed(context, AccountSettings.id);
+                      Navigator.pushNamed(context, BankSetup.id);
                     },
                     title1: 'Bank Account Setting',
                     title2: 'This setup is required for withrawal',

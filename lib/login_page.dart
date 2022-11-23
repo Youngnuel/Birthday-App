@@ -148,7 +148,7 @@ class _LoginPageState extends State<LoginPage> {
                             fontWeight: FontWeight.w400),
                         children: [
                           TextSpan(
-                            text: 'Sign Up',
+                            text: ' Sign Up',
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,

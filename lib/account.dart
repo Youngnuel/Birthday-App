@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:birthday_app/account_settings.dart';
+import 'package:birthday_app/error_page.dart';
 import 'package:flutter/material.dart';
 
 import 'components/accounttabs.dart';
@@ -175,7 +176,9 @@ class Account extends StatelessWidget {
                   ),
                   SizedBox(height: 12),
                   AccountTabs(
-                    tapMe: () {},
+                    tapMe: () {
+                      Navigator.pushNamed(context, ErrorPage.id);
+                    },
                     title1: 'Withdraw',
                     title2: 'We provides a great withdrawal experience.',
                     iconimage: AssetImage('images/withdraw.png'),

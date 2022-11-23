@@ -6,6 +6,7 @@ import 'package:birthday_app/active_event_page.dart';
 import 'package:birthday_app/change_password.dart';
 import 'package:birthday_app/create_account.dart';
 import 'package:birthday_app/dashboard.dart';
+import 'package:birthday_app/error_page.dart';
 import 'package:birthday_app/events_congratulations.dart';
 import 'package:birthday_app/create_event.dart';
 import 'package:birthday_app/events_page.dart';
@@ -14,6 +15,7 @@ import 'package:birthday_app/notifications.dart';
 import 'package:birthday_app/otp_page.dart';
 import 'package:birthday_app/login_page.dart';
 import 'package:birthday_app/personal_settings.dart';
+import 'package:birthday_app/withdrawal.dart';
 import 'package:flutter/material.dart';
 import 'onboarding.dart';
 
@@ -52,6 +54,8 @@ class _BirthdayAppState extends State<BirthdayApp> {
         AccountSettings.id: (context) => AccountSettings(),
         PersonalSettings.id: (context) => PersonalSettings(),
         ChangePassword.id: (context) => ChangePassword(),
+        ErrorPage.id: (context) => ErrorPage(),
+        Withdrawal.id: (context) => Withdrawal(),
       },
     );
   }

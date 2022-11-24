@@ -2,6 +2,7 @@
 
 import 'package:birthday_app/account_settings.dart';
 import 'package:birthday_app/bank_setup.dart';
+import 'package:birthday_app/card_error_page.dart';
 import 'package:birthday_app/error_page.dart';
 import 'package:flutter/material.dart';
 
@@ -198,7 +199,9 @@ class Account extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   AccountTabs(
-                    tapMe: () {},
+                    tapMe: () {
+                      Navigator.pushNamed(context, CardErrorPage.id);
+                    },
                     title1: 'Payment Card',
                     title2: 'Add and manage payment cards',
                     iconimage: AssetImage('images/atm-card.png'),

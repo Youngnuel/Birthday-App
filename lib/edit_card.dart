@@ -5,17 +5,18 @@ import 'package:flutter/material.dart';
 
 import 'components/cardtab.dart';
 import 'components/number_space.dart';
+import 'components/optionbuttons.dart';
 import 'components/primarybutton.dart';
 import 'components/primarytextfield.dart';
 
-class AddCard extends StatefulWidget {
-  static const id = 'add_card';
+class EditCard extends StatefulWidget {
+  static const id = 'edit_card';
 
   @override
-  State<AddCard> createState() => _AddCardState();
+  State<EditCard> createState() => _EditCardState();
 }
 
-class _AddCardState extends State<AddCard> {
+class _EditCardState extends State<EditCard> {
   final cardnumberController = TextEditingController();
   final holdersnameController = TextEditingController();
   final cvvdigitsController = TextEditingController();
@@ -73,7 +74,7 @@ class _AddCardState extends State<AddCard> {
               ]),
               SizedBox(height: 18),
               Text(
-                'Add Card',
+                'Edit Card',
                 style: TextStyle(
                     color: Color(0xff17DBA7),
                     fontSize: 24,
@@ -130,11 +131,25 @@ class _AddCardState extends State<AddCard> {
                 ],
               ),
               SizedBox(height: 72),
-              PrimaryButton(
-                  title: 'ADD CARD',
-                  tapMe: () {
-                    Navigator.pushNamed(context, CardPage.id);
-                  }),
+              Row(
+                children: [
+                  OptionButtons(
+                    title: 'REMOVE',
+                    textColor: Color(0xff17DBA7),
+                    boxColor: Color(0xffE4F9F4),
+                    tapMe: () {},
+                  ),
+                  SizedBox(width: 11),
+                  OptionButtons(
+                    title: 'UPDATE',
+                    textColor: Colors.white,
+                    boxColor: Color(0xff17DBA7),
+                    tapMe: () {
+                      Navigator.pushNamed(context, CardPage.id);
+                    },
+                  ),
+                ],
+              ),
               SizedBox(height: 32),
             ]),
           ),

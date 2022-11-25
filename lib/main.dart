@@ -8,14 +8,17 @@ import 'package:birthday_app/add_card.dart';
 import 'package:birthday_app/bank_setup.dart';
 import 'package:birthday_app/bank_setup_verification.dart';
 import 'package:birthday_app/card_error_page.dart';
+import 'package:birthday_app/card_page.dart';
 import 'package:birthday_app/change_password.dart';
 import 'package:birthday_app/create_account.dart';
 import 'package:birthday_app/dashboard.dart';
+import 'package:birthday_app/edit_card.dart';
 import 'package:birthday_app/error_page.dart';
 import 'package:birthday_app/events_congratulations.dart';
 import 'package:birthday_app/create_event.dart';
 import 'package:birthday_app/events_page.dart';
 import 'package:birthday_app/home_page.dart';
+import 'package:birthday_app/invite_friend.dart';
 import 'package:birthday_app/notifications.dart';
 import 'package:birthday_app/otp_page.dart';
 import 'package:birthday_app/login_page.dart';
@@ -68,6 +71,9 @@ class _BirthdayAppState extends State<BirthdayApp> {
         AccountDetailsAdded.id: (context) => AccountDetailsAdded(),
         CardErrorPage.id: (context) => CardErrorPage(),
         AddCard.id: (context) => AddCard(),
+        CardPage.id: (context) => CardPage(),
+        EditCard.id: (context) => EditCard(),
+        InviteFriend.id: (context) => InviteFriend(),
       },
     );
   }

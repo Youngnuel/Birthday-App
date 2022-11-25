@@ -4,6 +4,7 @@ import 'package:birthday_app/account_settings.dart';
 import 'package:birthday_app/bank_setup.dart';
 import 'package:birthday_app/card_error_page.dart';
 import 'package:birthday_app/error_page.dart';
+import 'package:birthday_app/invite_friend.dart';
 import 'package:flutter/material.dart';
 
 import 'components/accounttabs.dart';
@@ -208,7 +209,9 @@ class Account extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   AccountTabs(
-                    tapMe: () {},
+                    tapMe: () {
+                      Navigator.pushNamed(context, InviteFriend.id);
+                    },
                     title1: 'Invite a friend',
                     title2: 'Don’t enjoy alone',
                     iconimage: AssetImage('images/gift.png'),

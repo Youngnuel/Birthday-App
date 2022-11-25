@@ -1,7 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
+import 'package:birthday_app/account_details_added.dart';
+import 'package:birthday_app/add_card.dart';
 import 'package:birthday_app/components/events_tabs.dart';
 import 'package:birthday_app/components/page_indicator.dart';
+import 'package:birthday_app/invite_friend.dart';
 import 'package:flutter/material.dart';
 
 import 'components/setup_tabs.dart';
@@ -192,20 +195,30 @@ class _HomePageState extends State<HomePage> {
                   ),
                   SizedBox(height: 12),
                   SetupTabs(
-                      title1: 'Bank Account Setting',
-                      title2: 'This setup is required for withrawal',
-                      iconimage: AssetImage('images/safe-shield.png')),
+                    title1: 'Bank Account Setting',
+                    title2: 'This setup is required for withdrawal',
+                    iconimage: AssetImage('images/safe-shield.png'),
+                    tapMe: () {
+                      Navigator.pushNamed(context, AccountDetailsAdded.id);
+                    },
+                  ),
                   SizedBox(height: 8),
                   SetupTabs(
                     title1: 'Add Card',
                     title2: 'Help your friend celebrate in one click',
                     iconimage: AssetImage('images/atm-card.png'),
+                    tapMe: () {
+                      Navigator.pushNamed(context, AddCard.id);
+                    },
                   ),
                   SizedBox(height: 8),
                   SetupTabs(
                     title1: 'Invite a friend',
                     title2: 'Don\'t enjoy alone',
                     iconimage: AssetImage('images/gift.png'),
+                    tapMe: () {
+                      Navigator.pushNamed(context, InviteFriend.id);
+                    },
                   ),
                   SizedBox(height: 34),
                 ],

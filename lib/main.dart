@@ -12,6 +12,7 @@ import 'package:birthday_app/card_page.dart';
 import 'package:birthday_app/change_password.dart';
 import 'package:birthday_app/create_account.dart';
 import 'package:birthday_app/dashboard.dart';
+import 'package:birthday_app/donation_details.dart';
 import 'package:birthday_app/edit_card.dart';
 import 'package:birthday_app/error_page.dart';
 import 'package:birthday_app/events_congratulations.dart';
@@ -26,6 +27,7 @@ import 'package:birthday_app/personal_settings.dart';
 import 'package:birthday_app/withdrawal.dart';
 import 'package:birthday_app/withdrawal_processing.dart';
 import 'package:flutter/material.dart';
+import 'package:birthday_app/donation_page.dart';
 import 'onboarding.dart';
 
 void main() {
@@ -74,6 +76,8 @@ class _BirthdayAppState extends State<BirthdayApp> {
         CardPage.id: (context) => CardPage(),
         EditCard.id: (context) => EditCard(),
         InviteFriend.id: (context) => InviteFriend(),
+        DonationPage.id: (context) => DonationPage(),
+        DonationsDetails.id: (context) => DonationsDetails(),
       },
     );
   }

@@ -2,6 +2,7 @@
 
 import 'package:birthday_app/active_event_page.dart';
 import 'package:birthday_app/components/events_tabs2.dart';
+import 'package:birthday_app/donation_page.dart';
 import 'package:flutter/material.dart';
 
 import 'components/events_tabs.dart';
@@ -133,16 +134,21 @@ class _EventsPageState extends State<EventsPage> {
                   SizedBox(height: 24),
                   if (selected == 'active') ...[
                     EventsTab(
+                        tapMe: () {},
                         title: 'Beach Party get together',
                         amount1: '₦7,000',
                         amount2: '/11,000'),
                     SizedBox(height: 7),
                     EventsTab(
+                        tapMe: () {
+                          Navigator.pushNamed(context, DonationPage.id);
+                        },
                         title: 'Graduation Ceremony',
                         amount1: '₦12,000',
                         amount2: '/65,000'),
                     SizedBox(height: 7),
                     EventsTab(
+                        tapMe: () {},
                         title: 'Beach Party',
                         amount1: '₦8,000',
                         amount2: '/16,000'),

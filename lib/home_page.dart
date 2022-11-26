@@ -157,17 +157,22 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: 12),
               EventsTab(
+                  tapMe: () {},
                   title: 'Beach Party get together',
                   amount1: '₦7,000',
                   amount2: '/11,000'),
               SizedBox(height: 7),
               EventsTab(
+                  tapMe: () {},
                   title: 'Graduation Ceremony',
                   amount1: '₦12,000',
                   amount2: '/65,000'),
               SizedBox(height: 7),
               EventsTab(
-                  title: 'Beach Party', amount1: '₦8,000', amount2: '/16,000'),
+                  tapMe: () {},
+                  title: 'Beach Party',
+                  amount1: '₦8,000',
+                  amount2: '/16,000'),
               SizedBox(height: 27),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

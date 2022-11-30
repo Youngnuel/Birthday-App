@@ -1,8 +1,9 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 
 class PrimaryTextfield extends StatelessWidget {
+  // ignore: prefer_const_constructors_in_immutables
   PrimaryTextfield({
     required this.controller,
     this.keyboardType = TextInputType.text,
@@ -16,7 +17,7 @@ class PrimaryTextfield extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 48,
       child: TextField(
         obscureText: hidetext,

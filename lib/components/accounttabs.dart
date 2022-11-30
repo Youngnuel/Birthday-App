@@ -33,7 +33,7 @@ class AccountTabs extends StatelessWidget {
         child: Row(
           children: [
             SizedBox(width: 12),
-            Container(
+            SizedBox(
               height: 24,
               width: 24,
               child: Image(

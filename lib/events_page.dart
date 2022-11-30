@@ -1,6 +1,5 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, use_key_in_widget_constructors
 
-import 'package:birthday_app/active_event_page.dart';
 import 'package:birthday_app/components/events_tabs2.dart';
 import 'package:birthday_app/donation_page.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +26,7 @@ class _EventsPageState extends State<EventsPage> {
             onTap: () {
               Navigator.pop(context);
             },
-            child: Container(
+            child: SizedBox(
               height: 21,
               width: 12,
               child: Icon(
@@ -55,7 +54,7 @@ class _EventsPageState extends State<EventsPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(height: 12),
-                  Container(
+                  SizedBox(
                     height: 144,
                     width: 366,
                     child: Image(

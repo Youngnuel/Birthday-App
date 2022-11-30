@@ -1,13 +1,10 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
-import 'package:birthday_app/card_page.dart';
-import 'package:birthday_app/dashboard.dart';
 import 'package:birthday_app/home_page.dart';
 import 'package:flutter/material.dart';
 
 import 'components/card_details_tab.dart';
 import 'components/number_space.dart';
-import 'components/optionbuttons.dart';
 import 'components/primarybutton.dart';
 import 'components/primarytextfield.dart';
 

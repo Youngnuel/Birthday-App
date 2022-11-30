@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 
 class BankDetailsBox extends StatelessWidget {
@@ -13,7 +15,7 @@ class BankDetailsBox extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Color(0xfffA4E1DA),
+        color: Color(0xffA4E1DA),
         border: Border.all(
           color: Color(0xffA4E1DA),
         ),

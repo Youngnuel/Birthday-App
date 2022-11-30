@@ -1,13 +1,10 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
 import 'package:birthday_app/account_details_added.dart';
-import 'package:birthday_app/components/target_box.dart';
-import 'package:birthday_app/withdrawal.dart';
 import 'package:flutter/material.dart';
 
 import 'components/banksetupbox.dart';
 import 'components/primarybutton.dart';
-import 'components/primarytextfield.dart';
 
 class BankSetupVerfication extends StatefulWidget {
   static const id = 'bank_setup_verification';

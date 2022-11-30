@@ -19,7 +19,7 @@ class AccountSettings extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            child: Container(
+            child: SizedBox(
               height: 21,
               width: 12,
               child: Icon(

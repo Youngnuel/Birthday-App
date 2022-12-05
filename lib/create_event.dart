@@ -328,7 +328,18 @@ class _CreateEventState extends State<CreateEvent> {
                         maxLines: 4,
                         controller: descriptionController,
                         decoration: InputDecoration(
-                          border: OutlineInputBorder(
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              width: 1,
+                              color: Color(0xffA4E1DA),
+                            ),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              width: 1,
+                              color: Color(0xffA4E1DA),
+                            ),
                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
@@ -344,7 +355,7 @@ class _CreateEventState extends State<CreateEvent> {
                     ),
                     SizedBox(height: 12),
                     DropDownFlow(
-                      hintText: 'Category',
+                      hintText: 'Select Category',
                     ),
                     SizedBox(height: 24),
                     Text(

@@ -115,6 +115,7 @@ class EventsTab2 extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(width: 10),
             IconButton(
               onPressed: () {},
               iconSize: 24,

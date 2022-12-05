@@ -46,6 +46,7 @@ class NotificationsTab extends StatelessWidget {
                       ),
                       SizedBox(height: 2),
                       RichText(
+                        overflow: TextOverflow.ellipsis,
                         text: TextSpan(
                             text: title,
                             style: TextStyle(

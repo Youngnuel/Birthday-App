@@ -28,87 +28,86 @@ class OtpPage extends StatelessWidget {
           ),
         ),
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 24, right: 24),
-            child: SizedBox(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(height: 39),
-                  Text(
-                    'Verify your phone number 😉',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Color(0xff2C3149),
-                      fontWeight: FontWeight.w400,
-                      fontStyle: FontStyle.normal,
-                    ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(left: 24, right: 24),
+          child: SizedBox(
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(height: 39),
+                Text(
+                  'Verify your phone number 😉',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xff2C3149),
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
                   ),
-                  SizedBox(height: 9),
-                  Text(
-                    'You are just one step away',
-                    style: TextStyle(
-                        color: Color(0xff17DBA7),
-                        fontSize: 24,
-                        fontWeight: FontWeight.w700),
+                ),
+                SizedBox(height: 9),
+                Text(
+                  'You are just one step away',
+                  style: TextStyle(
+                      color: Color(0xff17DBA7),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700),
+                ),
+                SizedBox(height: 8),
+                Text(
+                  'Enter the 4 digit code sent to 081******37',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xff2C3149),
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
                   ),
-                  SizedBox(height: 8),
-                  Text(
-                    'Enter the 4 digit code sent to 081******37',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Color(0xff2C3149),
-                      fontWeight: FontWeight.w400,
-                      fontStyle: FontStyle.normal,
-                    ),
-                  ),
-                  OtpBox(),
-                  RichText(
-                    text: TextSpan(
-                        text: 'Haven\'t received code after 5 minutes?',
-                        style: TextStyle(
-                            color: Color(0xff888C91),
+                ),
+                OtpBox(),
+                RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                      text: 'Haven\'t received code after 5 minutes?',
+                      style: TextStyle(
+                          color: Color(0xff888C91),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400),
+                      children: [
+                        TextSpan(
+                          text: ' Resend code',
+                          style: TextStyle(
                             fontSize: 16,
-                            fontWeight: FontWeight.w400),
-                        children: [
-                          TextSpan(
-                            text: ' Resend code',
-                            style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xff17DBA7),
+                          ),
+                        ),
+                        TextSpan(
+                          text: ' or',
+                          style: TextStyle(
+                              color: Color(0xff888C91),
                               fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xff17DBA7),
-                            ),
+                              fontWeight: FontWeight.w400),
+                        ),
+                        TextSpan(
+                          text: ' Change number',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xff17DBA7),
                           ),
-                          TextSpan(
-                            text: ' or',
-                            style: TextStyle(
-                                color: Color(0xff888C91),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w400),
-                          ),
-                          TextSpan(
-                            text: ' Change number',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xff17DBA7),
-                            ),
-                          ),
-                        ]),
-                  ),
-                  SizedBox(height: 48),
-                  PrimaryButton(
-                      title: 'DONE',
-                      tapMe: () {
-                        Navigator.pushNamed(context, Dashboard.id);
-                      }),
-                  SizedBox(height: 48),
-                ],
-              ),
+                        ),
+                      ]),
+                ),
+                SizedBox(height: 48),
+                PrimaryButton(
+                    title: 'DONE',
+                    tapMe: () {
+                      Navigator.pushNamed(context, Dashboard.id);
+                    }),
+                SizedBox(height: 48),
+              ],
             ),
           ),
         ),

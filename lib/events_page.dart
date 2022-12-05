@@ -77,7 +77,7 @@ class _EventsPageState extends State<EventsPage> {
                             },
                             child: Container(
                               height: 31,
-                              width: double.infinity,
+                              width: 106,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(50),
                                   color: selected == 'active'
@@ -106,7 +106,7 @@ class _EventsPageState extends State<EventsPage> {
                             },
                             child: Container(
                               height: 31,
-                              width: double.infinity,
+                              width: 106,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 color: selected != 'ended'
@@ -136,21 +136,26 @@ class _EventsPageState extends State<EventsPage> {
                         tapMe: () {},
                         title: 'Beach Party get together',
                         amount1: '₦7,000',
-                        amount2: '/11,000'),
+                        amount2: '/11,000',
+                        linearvalue: 0.8),
                     SizedBox(height: 7),
                     EventsTab(
-                        tapMe: () {
-                          Navigator.pushNamed(context, DonationPage.id);
-                        },
-                        title: 'Graduation Ceremony',
-                        amount1: '₦12,000',
-                        amount2: '/65,000'),
+                      tapMe: () {
+                        Navigator.pushNamed(context, DonationPage.id);
+                      },
+                      title: 'Graduation Ceremony',
+                      amount1: '₦12,000',
+                      amount2: '/65,000',
+                      linearvalue: 0.4,
+                    ),
                     SizedBox(height: 7),
                     EventsTab(
-                        tapMe: () {},
-                        title: 'Beach Party',
-                        amount1: '₦8,000',
-                        amount2: '/16,000'),
+                      tapMe: () {},
+                      title: 'Beach Party',
+                      amount1: '₦8,000',
+                      amount2: '/16,000',
+                      linearvalue: 0.6,
+                    ),
                     SizedBox(height: 208)
                   ] else ...[
                     EventsTab2(

@@ -1,6 +1,5 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, use_key_in_widget_constructors,
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'components/name_tab2.dart';
@@ -138,16 +137,29 @@ class _ActiveEventPageState extends State<ActiveEventPage> {
                             fontSize: 12,
                             fontWeight: FontWeight.w400),
                       ),
-                      Transform.scale(
-                        scale: 0.6,
-                        child: CupertinoSwitch(
-                            trackColor: Color(0xffC5D0CE),
-                            thumbColor: Color(0xff6C6F80),
-                            value: false,
-                            onChanged: (bool value) {
-                              setState(() {});
-                            }),
-                      )
+                      SizedBox(width: 12),
+                      Stack(clipBehavior: Clip.none, children: [
+                        Container(
+                          height: 12.8,
+                          width: 28.8,
+                          decoration: BoxDecoration(
+                            color: Color(0xffC5D0CE),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        Positioned(
+                          top: -1.5,
+                          left: -1,
+                          child: Container(
+                            height: 16,
+                            width: 19.2,
+                            decoration: BoxDecoration(
+                              color: Color(0xff6C6F80),
+                              shape: BoxShape.circle,
+                            ),
+                          ),
+                        ),
+                      ])
                     ],
                   ),
                   SizedBox(height: 32),
@@ -155,7 +167,7 @@ class _ActiveEventPageState extends State<ActiveEventPage> {
                   SizedBox(height: 12),
                   TargetBox(
                     title: 'Raised amount',
-                    color: Color(0xffA4E1DA),
+                    color: Color(0xffEFFCF9),
                   ),
                   SizedBox(height: 32),
                   Row(

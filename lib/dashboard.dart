@@ -36,9 +36,20 @@ class _DashboardState extends State<Dashboard> {
         child: Center(child: _widgetOPtions.elementAt(_selectedIndex)),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        selectedFontSize: 10,
-        unselectedFontSize: 10,
-        selectedItemColor: Color(0xff17DBA7),
+        selectedLabelStyle: TextStyle(
+            fontWeight: FontWeight.w700,
+            color: Color(0xff2C3149),
+            fontSize: 10),
+        unselectedLabelStyle: TextStyle(
+            fontWeight: FontWeight.w700,
+            color: Color(0xffA2B1B4),
+            fontSize: 10),
+        selectedIconTheme: IconThemeData(
+          color: Color(0xff17DBA7),
+        ),
+        unselectedIconTheme: IconThemeData(
+          color: Color(0xffA2B1B4),
+        ),
         backgroundColor: Color(0xffFFFFFF),
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: true,

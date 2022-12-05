@@ -74,16 +74,15 @@ class _EventsCongratulationsState extends State<EventsCongratulations> {
                     children: [
                       Stack(
                         children: [
-                          SizedBox(
+                          Container(
                             height: 48,
                             width: 366,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Color(0xffA4E1DA),
+                                  width: 1,
                                 ),
-                              ),
-                            ),
+                                borderRadius: BorderRadius.circular(10)),
                           ),
                           Positioned(
                             right: 0,
@@ -130,16 +129,15 @@ class _EventsCongratulationsState extends State<EventsCongratulations> {
                       Row(
                         children: [
                           Expanded(
-                            child: SizedBox(
+                            child: Container(
                               height: 48,
                               width: 295,
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                    color: Color(0xffA4E1DA),
+                                    width: 1,
                                   ),
-                                ),
-                              ),
+                                  borderRadius: BorderRadius.circular(10)),
                             ),
                           ),
                           SizedBox(width: 6),

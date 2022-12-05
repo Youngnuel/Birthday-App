@@ -35,6 +35,7 @@ class NameTab2 extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
+                    overflow: TextOverflow.ellipsis,
                     fontSize: 16,
                     color: Color(0xff2C3149),
                     fontWeight: FontWeight.w400,
@@ -54,6 +55,7 @@ class NameTab2 extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(width: 91),
           Text(
             '₦4000',
             style: TextStyle(

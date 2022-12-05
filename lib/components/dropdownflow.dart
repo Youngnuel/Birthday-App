@@ -17,7 +17,23 @@ class DropDownFlow extends StatelessWidget {
             icon: Icon(Icons.keyboard_arrow_down_rounded),
             decoration: InputDecoration(
               hintText: hintText,
-              border: OutlineInputBorder(
+              hintStyle: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                color: Color(0xff888C91),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: Color(0xffA4E1DA),
+                ),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: Color(0xffA4E1DA),
+                ),
                 borderRadius: BorderRadius.circular(10),
               ),
             ),

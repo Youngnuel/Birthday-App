@@ -20,12 +20,24 @@ class PrimaryTextfield extends StatelessWidget {
     return SizedBox(
       height: 48,
       child: TextField(
+        style: TextStyle(
+          fontSize: 16,
+          fontWeight: FontWeight.w700,
+          color: Color(0xff2C3149),
+        ),
         obscureText: hidetext,
         controller: controller,
         keyboardType: keyboardType,
         decoration: InputDecoration(
           hintText: hintText,
-          border: OutlineInputBorder(
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              width: 1,
+              color: Color(0xffA4E1DA),
+            ),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
               width: 1,
               color: Color(0xffA4E1DA),

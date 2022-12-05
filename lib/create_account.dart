@@ -5,6 +5,7 @@ import 'package:birthday_app/login_page.dart';
 
 import 'package:flutter/material.dart';
 
+import 'components/phone_number_field.dart';
 import 'components/primarybutton.dart';
 import 'components/primarytextfield.dart';
 
@@ -110,39 +111,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       ),
                     ),
                     SizedBox(height: 16),
-                    Row(
-                      children: [
-                        SizedBox(
-                          height: 48,
-                          width: 68,
-                          child: TextField(
-                            decoration: InputDecoration(
-                              focusColor: Color(0xffA4E1DA),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: 4),
-                        Expanded(
-                          child: SizedBox(
-                            height: 48,
-                            width: 294,
-                            child: TextField(
-                              controller: phonenumberController,
-                              keyboardType: TextInputType.phone,
-                              decoration: InputDecoration(
-                                focusColor: Color(0xffA4E1DA),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
+                    PhoneNumberField(controller: phonenumberController),
                     SizedBox(height: 24),
                     Text(
                       'Email',

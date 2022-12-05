@@ -12,11 +12,26 @@ class OtpBox extends StatelessWidget {
           height: 48,
           width: 48,
           child: TextField(
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: Color(0xff2C3149),
+            ),
             keyboardType: TextInputType.number,
             obscureText: true,
             decoration: InputDecoration(
-              focusColor: Color(0xffA4E1DA),
-              border: OutlineInputBorder(
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: Color(0xffA4E1DA),
+                ),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: Color(0xffA4E1DA),
+                ),
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
@@ -36,11 +51,26 @@ class OtpBox extends StatelessWidget {
           height: 48,
           width: 48,
           child: TextField(
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: Color(0xff2C3149),
+            ),
             keyboardType: TextInputType.number,
             obscureText: true,
             decoration: InputDecoration(
-              focusColor: Color(0xffA4E1DA),
-              border: OutlineInputBorder(
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: Color(0xffA4E1DA),
+                ),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: Color(0xffA4E1DA),
+                ),
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
@@ -60,11 +90,26 @@ class OtpBox extends StatelessWidget {
           height: 48,
           width: 48,
           child: TextField(
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: Color(0xff2C3149),
+            ),
             keyboardType: TextInputType.number,
             obscureText: true,
             decoration: InputDecoration(
-              focusColor: Color(0xffA4E1DA),
-              border: OutlineInputBorder(
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: Color(0xffA4E1DA),
+                ),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: Color(0xffA4E1DA),
+                ),
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
@@ -84,11 +129,26 @@ class OtpBox extends StatelessWidget {
           height: 48,
           width: 48,
           child: TextField(
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: Color(0xff2C3149),
+            ),
             keyboardType: TextInputType.number,
             obscureText: true,
             decoration: InputDecoration(
-              focusColor: Color(0xffA4E1DA),
-              border: OutlineInputBorder(
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: Color(0xffA4E1DA),
+                ),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  width: 1,
+                  color: Color(0xffA4E1DA),
+                ),
                 borderRadius: BorderRadius.circular(10),
               ),
             ),

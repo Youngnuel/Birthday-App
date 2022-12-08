@@ -4,6 +4,7 @@ import 'package:birthday_app/account.dart';
 import 'package:birthday_app/edit_card.dart';
 import 'package:flutter/material.dart';
 
+import 'components/card_dots.dart';
 import 'components/cardtab.dart';
 import 'components/primarybutton.dart';
 
@@ -70,14 +71,28 @@ class CardPage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 16),
-                        Text(
-                          '2081oooooooo6093',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Color(0xff2C3149),
-                            fontWeight: FontWeight.w700,
-                            fontStyle: FontStyle.normal,
-                          ),
+                        Row(
+                          children: [
+                            Text(
+                              '2081',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Color(0xff2C3149),
+                                fontWeight: FontWeight.w700,
+                                fontStyle: FontStyle.normal,
+                              ),
+                            ),
+                            CardDots(),
+                            Text(
+                              '6093',
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Color(0xff2C3149),
+                                fontWeight: FontWeight.w700,
+                                fontStyle: FontStyle.normal,
+                              ),
+                            ),
+                          ],
                         ),
                         SizedBox(width: 28),
                         SizedBox(

@@ -32,8 +32,18 @@ class NumberSpace extends StatelessWidget {
               keyboardType: TextInputType.number,
               controller: controller,
               decoration: InputDecoration(
-                focusColor: Color(0xffA4E1DA),
-                border: OutlineInputBorder(
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    width: 1,
+                    color: Color(0xffA4E1DA),
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    width: 1,
+                    color: Color(0xffA4E1DA),
+                  ),
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),

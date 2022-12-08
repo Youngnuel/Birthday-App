@@ -92,72 +92,82 @@ class NotificationsTab extends StatelessWidget {
               ],
             ),
             SizedBox(height: 12),
-            SizedBox(width: 16),
-            Container(
-              width: 292,
-              decoration: BoxDecoration(
-                color: Color(0xffFFFFFF),
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                  color: Color(0xffA4E1DA),
-                ),
-              ),
-              child: Row(
-                children: [
-                  SizedBox(width: 24),
-                  Image(
-                    width: 28.83,
-                    height: 32,
-                    image: AssetImage('images/calendaricon.png'),
-                  ),
-                  SizedBox(width: 24),
-                  Container(
-                    padding: EdgeInsets.only(top: 16, bottom: 12),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Beach Party get together',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Color(0xff2C3149),
-                            fontWeight: FontWeight.w700,
-                            fontStyle: FontStyle.normal,
-                          ),
-                        ),
-                        SizedBox(height: 5),
-                        RichText(
-                          text: TextSpan(
-                              text: 'N7,000',
-                              style: TextStyle(
-                                  color: Color(0xff17CCA4),
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w700),
-                              children: [
-                                TextSpan(
-                                  text: 'N11,000',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0xff17CCA4),
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: ' Raised',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0xff6C6F80),
-                                  ),
-                                ),
-                              ]),
-                        ),
-                      ],
+            Row(
+              children: [
+                SizedBox(width: 55),
+                Container(
+                  height: 82,
+                  width: 292,
+                  decoration: BoxDecoration(
+                    color: Color(0xffFFFFFF),
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      color: Color(0xffA4E1DA),
                     ),
                   ),
-                  SizedBox(width: 12),
-                ],
-              ),
+                  child: Row(
+                    children: [
+                      SizedBox(width: 24),
+                      Image(
+                        width: 28.83,
+                        height: 32,
+                        image: AssetImage('images/calendaricon.png'),
+                      ),
+                      SizedBox(width: 24),
+                      Expanded(
+                        child: Container(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Beach Party get together',
+                                style: TextStyle(
+                                  overflow: TextOverflow.ellipsis,
+                                  fontSize: 16,
+                                  color: Color(0xff2C3149),
+                                  fontWeight: FontWeight.w700,
+                                  fontStyle: FontStyle.normal,
+                                ),
+                              ),
+                              SizedBox(height: 5),
+                              RichText(
+                                overflow: TextOverflow.ellipsis,
+                                text: TextSpan(
+                                    text: 'N7,000',
+                                    style: TextStyle(
+                                        color: Color(0xff17CCA4),
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w700),
+                                    children: [
+                                      TextSpan(
+                                        text: 'N11,000',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color(0xff17CCA4),
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: ' Raised',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color(0xff6C6F80),
+                                        ),
+                                      ),
+                                    ]),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 24),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 12),
+              ],
             ),
             SizedBox(height: 16),
           ],

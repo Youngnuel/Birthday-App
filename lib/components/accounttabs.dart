@@ -50,7 +50,7 @@ class AccountTabs extends StatelessWidget {
                     title1,
                     style: TextStyle(
                       fontSize: 16,
-                      color: Color(0xff17DBA7),
+                      color: Color(0xff2C3149),
                       fontWeight: FontWeight.w700,
                       fontStyle: FontStyle.normal,
                     ),

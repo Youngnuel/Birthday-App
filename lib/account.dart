@@ -97,76 +97,79 @@ class Account extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 32),
-                  Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        fit: BoxFit.contain,
-                        alignment: Alignment.centerRight,
-                        image: AssetImage('images/shape.png'),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, AccountSettings.id);
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.contain,
+                          alignment: Alignment.centerRight,
+                          image: AssetImage('images/shape.png'),
+                        ),
+                        color: Color(0xffEFFCF9),
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                      color: Color(0xffEFFCF9),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.only(top: 30, bottom: 31),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              SizedBox(width: 16),
-                              SizedBox(
-                                height: 64,
-                                width: 66,
-                                child: Image(
-                                  image: AssetImage('images/accounticon.png'),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 30, bottom: 31),
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                SizedBox(width: 16),
+                                SizedBox(
+                                  height: 64,
+                                  width: 66,
+                                  child: Image(
+                                    image: AssetImage('images/accounticon.png'),
+                                  ),
                                 ),
-                              ),
-                              SizedBox(width: 11),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'My Account Settings',
-                                      style: TextStyle(
-                                        fontSize: 24,
-                                        color: Color(0xff17DBA7),
-                                        fontWeight: FontWeight.w700,
-                                        fontStyle: FontStyle.normal,
+                                SizedBox(width: 11),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'My Account Settings',
+                                        style: TextStyle(
+                                          fontSize: 24,
+                                          color: Color(0xff17DBA7),
+                                          fontWeight: FontWeight.w700,
+                                          fontStyle: FontStyle.normal,
+                                        ),
                                       ),
-                                    ),
-                                    SizedBox(height: 8),
-                                    Text(
-                                      'Profile Setting,  Change Password',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        color: Color(0xff2C3149),
-                                        fontWeight: FontWeight.w400,
-                                        fontStyle: FontStyle.normal,
+                                      SizedBox(height: 8),
+                                      Text(
+                                        'Profile Setting,  Change Password',
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Color(0xff2C3149),
+                                          fontWeight: FontWeight.w400,
+                                          fontStyle: FontStyle.normal,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              SizedBox(width: 50),
-                              IconButton(
-                                onPressed: () {
-                                  Navigator.pushNamed(
-                                      context, AccountSettings.id);
-                                },
-                                iconSize: 24,
-                                icon: Icon(
-                                  Icons.arrow_forward,
-                                  color: Color(0xffA4E1DA),
+                                SizedBox(width: 50),
+                                IconButton(
+                                  onPressed: () {},
+                                  iconSize: 24,
+                                  icon: Icon(
+                                    Icons.arrow_forward,
+                                    color: Color(0xffA4E1DA),
+                                  ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 14,
-                              ),
-                            ],
-                          ),
-                        ],
+                                SizedBox(
+                                  width: 14,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

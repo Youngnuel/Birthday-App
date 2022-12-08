@@ -15,7 +15,7 @@ class BankDetailsBox extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Color(0xffA4E1DA),
+        color: Color(0xffF1FDFA),
         border: Border.all(
           color: Color(0xffA4E1DA),
         ),

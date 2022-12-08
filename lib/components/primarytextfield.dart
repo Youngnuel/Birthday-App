@@ -30,6 +30,10 @@ class PrimaryTextfield extends StatelessWidget {
         keyboardType: keyboardType,
         decoration: InputDecoration(
           hintText: hintText,
+          hintStyle: TextStyle(
+              fontSize: 16,
+              color: Color(0xffC5D0CE),
+              fontWeight: FontWeight.w700),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(
               width: 1,

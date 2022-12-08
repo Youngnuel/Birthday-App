@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
+import 'package:birthday_app/components/phone_number_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -123,39 +124,7 @@ class _PersonalSettingsState extends State<PersonalSettings> {
                       ),
                     ),
                     SizedBox(height: 16),
-                    Row(
-                      children: [
-                        SizedBox(
-                          height: 48,
-                          width: 68,
-                          child: TextField(
-                            decoration: InputDecoration(
-                              focusColor: Color(0xffA4E1DA),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(width: 4),
-                        Expanded(
-                          child: SizedBox(
-                            height: 48,
-                            width: 294,
-                            child: TextField(
-                              controller: phonenumberController,
-                              keyboardType: TextInputType.phone,
-                              decoration: InputDecoration(
-                                focusColor: Color(0xffA4E1DA),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
+                    PhoneNumberField(controller: phonenumberController),
                     SizedBox(height: 24),
                     Text(
                       'Email',

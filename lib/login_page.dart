@@ -2,6 +2,7 @@
 
 import 'package:birthday_app/components/primarybutton.dart';
 import 'package:birthday_app/create_account.dart';
+import 'package:birthday_app/dashboard.dart';
 
 import 'package:flutter/material.dart';
 
@@ -104,7 +105,11 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
                 SizedBox(height: 48),
-                PrimaryButton(title: 'Login', tapMe: () {}),
+                PrimaryButton(
+                    title: 'Login',
+                    tapMe: () {
+                      Navigator.pushNamed(context, Dashboard.id);
+                    }),
                 SizedBox(height: 64),
                 Text(
                   'Or continue with',

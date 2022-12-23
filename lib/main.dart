@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:birthday_app/account.dart';
 import 'package:birthday_app/account_details_added.dart';
@@ -29,14 +29,15 @@ import 'package:birthday_app/withdrawal_processing.dart';
 import 'package:flutter/material.dart';
 import 'package:birthday_app/donation_page.dart';
 import 'onboarding.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(BirthdayApp());
 }
 
 class BirthdayApp extends StatefulWidget {
-  const BirthdayApp({super.key});
-
   @override
   State<BirthdayApp> createState() => _BirthdayAppState();
 }

@@ -1,8 +1,9 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, use_build_context_synchronously
 
 import 'package:birthday_app/components/primarybutton.dart';
 import 'package:birthday_app/create_account.dart';
 import 'package:birthday_app/dashboard.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final _auth = FirebaseAuth.instance;
   final emailController = TextEditingController();
 
   final passwordController = TextEditingController();
@@ -107,8 +109,17 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: 48),
                 PrimaryButton(
                     title: 'Login',
-                    tapMe: () {
-                      Navigator.pushNamed(context, Dashboard.id);
+                    tapMe: () async {
+                      try {
+                        final user = await _auth.signInWithEmailAndPassword(
+                            email: emailController.text,
+                            password: passwordController.text);
+                        if (user != null) {
+                          Navigator.pushNamed(context, Dashboard.id);
+                        }
+                      } catch (e) {
+                        print(e);
+                      }
                     }),
                 SizedBox(height: 64),
                 Text(

@@ -87,6 +87,7 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: 32),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'Events',
@@ -167,7 +168,7 @@ class _HomePageState extends State<HomePage> {
                 title: 'Beach Party get together',
                 amount1: '₦7,000',
                 amount2: '/11,000',
-                linearvalue: 0.8,
+                width: 230,
               ),
               SizedBox(height: 7),
               EventsTab(
@@ -175,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                 title: 'Graduation Ceremony',
                 amount1: '₦12,000',
                 amount2: '/65,000',
-                linearvalue: 0.4,
+                width: 135,
               ),
               SizedBox(height: 7),
               EventsTab(
@@ -183,32 +184,37 @@ class _HomePageState extends State<HomePage> {
                 title: 'Beach Party',
                 amount1: '₦8,000',
                 amount2: '/16,000',
-                linearvalue: 0.6,
+                width: 196,
               ),
               SizedBox(height: 27),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  RichText(
-                    text: TextSpan(
-                        text: 'Complete Setup . ',
+                  Row(
+                    children: [
+                      Text(
+                        'Complete Setup',
                         style: TextStyle(
                           fontSize: 16,
                           color: Color(0xff2C3149),
                           fontWeight: FontWeight.w700,
-                          fontStyle: FontStyle.normal,
                         ),
-                        children: [
-                          TextSpan(
-                            text: '3/5',
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: Color(0xff888C91),
-                              fontWeight: FontWeight.w700,
-                              fontStyle: FontStyle.normal,
-                            ),
-                          ),
-                        ]),
+                      ),
+                      SizedBox(width: 4),
+                      Icon(
+                        Icons.circle,
+                        size: 3,
+                      ),
+                      SizedBox(width: 4),
+                      Text(
+                        '3/5',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: Color(0xff888C91),
+                          fontWeight: FontWeight.w700,
+                        ),
+                      )
+                    ],
                   ),
                   SizedBox(height: 12),
                   SetupTabs(

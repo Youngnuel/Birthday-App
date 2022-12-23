@@ -88,8 +88,28 @@ class _InviteFriendState extends State<InviteFriend> {
                             height: 48,
                             width: 366,
                             child: TextField(
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xff2C3149),
+                              ),
                               decoration: InputDecoration(
-                                border: OutlineInputBorder(
+                                hintStyle: TextStyle(
+                                    fontSize: 16,
+                                    color: Color(0xffC5D0CE),
+                                    fontWeight: FontWeight.w700),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    width: 1,
+                                    color: Color(0xffA4E1DA),
+                                  ),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    width: 1,
+                                    color: Color(0xffA4E1DA),
+                                  ),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                               ),
@@ -140,18 +160,36 @@ class _InviteFriendState extends State<InviteFriend> {
                       Row(
                         children: [
                           Expanded(
-                            child: SizedBox(
-                              height: 48,
-                              width: 295,
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
+                              child: SizedBox(
+                            height: 48,
+                            child: TextField(
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xff2C3149),
+                              ),
+                              decoration: InputDecoration(
+                                hintStyle: TextStyle(
+                                    fontSize: 16,
+                                    color: Color(0xffC5D0CE),
+                                    fontWeight: FontWeight.w700),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    width: 1,
+                                    color: Color(0xffA4E1DA),
                                   ),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    width: 1,
+                                    color: Color(0xffA4E1DA),
+                                  ),
+                                  borderRadius: BorderRadius.circular(10),
                                 ),
                               ),
                             ),
-                          ),
+                          )),
                           SizedBox(width: 6),
                           Container(
                             height: 48,

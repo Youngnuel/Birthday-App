@@ -74,15 +74,35 @@ class _EventsCongratulationsState extends State<EventsCongratulations> {
                     children: [
                       Stack(
                         children: [
-                          Container(
+                          SizedBox(
                             height: 48,
-                            width: 366,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                  color: Color(0xffA4E1DA),
-                                  width: 1,
+                            child: TextField(
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xff2C3149),
+                              ),
+                              decoration: InputDecoration(
+                                hintStyle: TextStyle(
+                                    fontSize: 16,
+                                    color: Color(0xffC5D0CE),
+                                    fontWeight: FontWeight.w700),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    width: 1,
+                                    color: Color(0xffA4E1DA),
+                                  ),
+                                  borderRadius: BorderRadius.circular(10),
                                 ),
-                                borderRadius: BorderRadius.circular(10)),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    width: 1,
+                                    color: Color(0xffA4E1DA),
+                                  ),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
+                            ),
                           ),
                           Positioned(
                             right: 0,
@@ -129,17 +149,36 @@ class _EventsCongratulationsState extends State<EventsCongratulations> {
                       Row(
                         children: [
                           Expanded(
-                            child: Container(
-                              height: 48,
-                              width: 295,
-                              decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: Color(0xffA4E1DA),
+                              child: SizedBox(
+                            height: 48,
+                            child: TextField(
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xff2C3149),
+                              ),
+                              decoration: InputDecoration(
+                                hintStyle: TextStyle(
+                                    fontSize: 16,
+                                    color: Color(0xffC5D0CE),
+                                    fontWeight: FontWeight.w700),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
                                     width: 1,
+                                    color: Color(0xffA4E1DA),
                                   ),
-                                  borderRadius: BorderRadius.circular(10)),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    width: 1,
+                                    color: Color(0xffA4E1DA),
+                                  ),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                              ),
                             ),
-                          ),
+                          )),
                           SizedBox(width: 6),
                           Container(
                             height: 48,

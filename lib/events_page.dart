@@ -133,11 +133,12 @@ class _EventsPageState extends State<EventsPage> {
                   SizedBox(height: 24),
                   if (selected == 'active') ...[
                     EventsTab(
-                        tapMe: () {},
-                        title: 'Beach Party get together',
-                        amount1: '₦7,000',
-                        amount2: '/11,000',
-                        linearvalue: 0.8),
+                      tapMe: () {},
+                      title: 'Beach Party get together',
+                      amount1: '₦7,000',
+                      amount2: '/11,000',
+                      width: 230,
+                    ),
                     SizedBox(height: 7),
                     EventsTab(
                       tapMe: () {
@@ -146,7 +147,7 @@ class _EventsPageState extends State<EventsPage> {
                       title: 'Graduation Ceremony',
                       amount1: '₦12,000',
                       amount2: '/65,000',
-                      linearvalue: 0.4,
+                      width: 135,
                     ),
                     SizedBox(height: 7),
                     EventsTab(
@@ -154,7 +155,7 @@ class _EventsPageState extends State<EventsPage> {
                       title: 'Beach Party',
                       amount1: '₦8,000',
                       amount2: '/16,000',
-                      linearvalue: 0.6,
+                      width: 196,
                     ),
                     SizedBox(height: 208)
                   ] else ...[

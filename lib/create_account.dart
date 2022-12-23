@@ -2,6 +2,7 @@
 
 import 'package:birthday_app/otp_page.dart';
 import 'package:birthday_app/login_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,7 @@ class CreateAccount extends StatefulWidget {
 }
 
 class _CreateAccountState extends State<CreateAccount> {
+  final _auth = FirebaseAuth.instance;
   final firstnameController = TextEditingController();
   final lastnameController = TextEditingController();
   final phonenumberController = TextEditingController();
@@ -139,7 +141,10 @@ class _CreateAccountState extends State<CreateAccount> {
                     ),
                     SizedBox(height: 26),
                     Row(children: [
-                      Icon(Icons.circle_outlined, color: Color(0xff17DBA7)),
+                      Icon(
+                        Icons.circle_outlined,
+                        color: Color(0xff17DBA7),
+                      ),
                       SizedBox(width: 8),
                       RichText(
                         text: TextSpan(
@@ -165,8 +170,18 @@ class _CreateAccountState extends State<CreateAccount> {
                 SizedBox(height: 49),
                 PrimaryButton(
                     title: 'SIGN UP',
-                    tapMe: () {
-                      Navigator.pushNamed(context, OtpPage.id);
+                    tapMe: () async {
+                      try {
+                        final newUser =
+                            await _auth.createUserWithEmailAndPassword(
+                                email: emailController.text,
+                                password: passwordController.text);
+                        if (newUser != null) {
+                          Navigator.pushNamed(context, OtpPage.id);
+                        }
+                      } catch (e) {
+                        print(e);
+                      }
                     }),
                 SizedBox(height: 24),
                 GestureDetector(

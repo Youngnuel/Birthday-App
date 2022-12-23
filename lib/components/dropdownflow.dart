@@ -12,7 +12,6 @@ class DropDownFlow extends StatelessWidget {
       children: [
         SizedBox(
           height: 48,
-          width: 366,
           child: DropdownButtonFormField<String>(
             icon: Icon(Icons.keyboard_arrow_down_rounded),
             decoration: InputDecoration(

@@ -5,6 +5,8 @@ import 'package:birthday_app/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:birthday_app/components/primarybutton.dart';
 
+import 'components/page_view_content.dart';
+
 class OnboardingPage extends StatefulWidget {
   static const String id = 'onboarding';
 
@@ -49,157 +51,67 @@ class _OnboardingPageState extends State<OnboardingPage> {
               )
             : SizedBox(),
       ),
-      body: SingleChildScrollView(
-        child: Column(children: [
-          SizedBox(
-            height: 582.95,
-            child: PageView(
-              onPageChanged: (index) {
-                setState(() {
-                  _selectedIndex = index;
-                });
-              },
-              controller: controller,
-              children: [
-                Container(
-                  child: Column(
-                    children: [
-                      Image(
-                        image: AssetImage('images/screen1.png'),
-                        height: 450.95,
-                        width: 511.14,
-                      ),
-                      SizedBox(height: 20),
-                      SizedBox(
-                        width: 274,
-                        height: 58,
-                        child: Text(
-                          'Celebrating with friends couldn\'t be made easier.',
-                          style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xff212683)),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      SizedBox(height: 12),
-                      SizedBox(
-                        width: 321,
-                        height: 42,
-                        child: Text(
-                          'We promise you won\'t be out of fund this time your friends and love ones got you.',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Color(0xff2C3149),
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ],
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+            child: SizedBox(
+              child: PageView(
+                onPageChanged: (index) {
+                  setState(() {
+                    _selectedIndex = index;
+                  });
+                },
+                controller: controller,
+                children: [
+                  PageviewContent(
+                    pageimage: AssetImage('images/screen1.png'),
+                    titletext:
+                        'Celebrating with friends couldn\'t be made easier.',
+                    text:
+                        'We promise you won\'t be out of fund this time your friends and love ones got you.',
                   ),
-                ),
-                Container(
-                  child: Column(
-                    children: [
-                      Image(
-                        image: AssetImage('images/screen2.png'),
-                        height: 450.95,
-                        width: 511.14,
-                      ),
-                      SizedBox(height: 20),
-                      SizedBox(
-                        height: 58,
-                        width: 200,
-                        child: Text(
-                          'Raise funds for every celebrations',
-                          style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xff212683)),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      SizedBox(height: 12),
-                      SizedBox(
-                        width: 306,
-                        height: 42,
-                        child: Text(
-                          'Share donation links to your friends. You can see as a fund raiser for your event.',
-                          style: TextStyle(
-                            fontFamily: 'Proxima Nova',
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Color(0xff2C3149),
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ],
+                  PageviewContent(
+                    titletext: 'Raise funds for every celebrations',
+                    text:
+                        'Share donation links to your friends. You can see as a fund raiser for your event.',
+                    pageimage: AssetImage('images/screen2.png'),
                   ),
-                ),
-                Container(
-                  child: Column(
-                    children: [
-                      Image(
-                        image: AssetImage('images/screen3.png'),
-                        height: 450.95,
-                        width: 558.08,
-                      ),
-                      SizedBox(height: 20),
-                      SizedBox(
-                        height: 58,
-                        width: 283,
-                        child: Text(
+                  PageviewContent(
+                      titletext:
                           'Stay calm and let the donations start coming in.',
-                          style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700,
-                              color: Color(0xff212683)),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      SizedBox(height: 12),
-                      SizedBox(
-                        width: 323,
-                        height: 42,
-                        child: Text(
-                          'Like we said, “your family and friends got you”.',
-                          style: TextStyle(
-                            fontFamily: 'Proxima Nova',
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Color(0xff2C3149),
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                      text: 'Like we said, “your family and friends got you”.',
+                      pageimage: AssetImage('images/screen3.png')),
+                ],
+              ),
             ),
           ),
-          SizedBox(height: 42),
           PageIndicator(
             currentValue: _selectedIndex,
           ),
-          SizedBox(height: 64),
-          _selectedIndex < 2
-              ? PrimaryButton(
-                  title: 'NEXT',
-                  tapMe: () {
-                    controller.nextPage(
-                        duration: Duration(milliseconds: 300),
-                        curve: Curves.ease);
-                  })
-              : PrimaryButton(
-                  tapMe: () {
-                    Navigator.pushNamed(context, LoginPage.id);
-                  },
-                  title: 'LET\'S GO'),
-          SizedBox(height: 48)
-        ]),
+          SizedBox(height: 40),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+            child: Column(
+              children: [
+                if (_selectedIndex < 2)
+                  PrimaryButton(
+                      title: 'NEXT',
+                      tapMe: () {
+                        controller.nextPage(
+                            duration: Duration(milliseconds: 300),
+                            curve: Curves.ease);
+                      })
+                else
+                  PrimaryButton(
+                      tapMe: () {
+                        Navigator.pushNamed(context, LoginPage.id);
+                      },
+                      title: 'LET\'S GO'),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

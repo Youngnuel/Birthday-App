@@ -8,6 +8,9 @@ import 'components/primarybutton.dart';
 
 class OtpPage extends StatelessWidget {
   static const id = 'otp_page';
+  OtpPage({this.phonenumber = ''});
+  final String phonenumber;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +60,8 @@ class OtpPage extends StatelessWidget {
                 ),
                 SizedBox(height: 8),
                 Text(
-                  'Enter the 4 digit code sent to 081******37',
+                  'Enter the 4 digit code sent to 0$phonenumber'
+                      .replaceRange(34, 40, '******'),
                   style: TextStyle(
                     fontSize: 16,
                     color: Color(0xff2C3149),

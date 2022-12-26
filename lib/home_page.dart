@@ -4,6 +4,7 @@ import 'package:birthday_app/account_details_added.dart';
 import 'package:birthday_app/add_card.dart';
 import 'package:birthday_app/components/events_tabs.dart';
 import 'package:birthday_app/components/page_indicator.dart';
+import 'package:birthday_app/create_event.dart';
 import 'package:birthday_app/invite_friend.dart';
 import 'package:flutter/material.dart';
 
@@ -123,8 +124,14 @@ class _HomePageState extends State<HomePage> {
                       });
                     },
                     children: [
-                      Container(
-                        child: Image(image: AssetImage('images/sliderow1.png')),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, CreateEvent.id);
+                        },
+                        child: Container(
+                          child:
+                              Image(image: AssetImage('images/sliderow1.png')),
+                        ),
                       ),
                       Container(
                         child: Image(image: AssetImage('images/sliderow2.png')),

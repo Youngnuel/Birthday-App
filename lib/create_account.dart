@@ -177,7 +177,15 @@ class _CreateAccountState extends State<CreateAccount> {
                                 email: emailController.text,
                                 password: passwordController.text);
                         if (newUser != null) {
-                          Navigator.pushNamed(context, OtpPage.id);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => OtpPage(
+                                  phonenumber: phonenumberController.text),
+                            ),
+                          ).whenComplete(
+                            () => phonenumberController.clear(),
+                          );
                         }
                       } catch (e) {
                         print(e);

@@ -24,6 +24,7 @@ import 'package:birthday_app/notifications.dart';
 import 'package:birthday_app/otp_page.dart';
 import 'package:birthday_app/login_page.dart';
 import 'package:birthday_app/personal_settings.dart';
+import 'package:birthday_app/splash_screen.dart';
 import 'package:birthday_app/withdrawal.dart';
 import 'package:birthday_app/withdrawal_processing.dart';
 import 'package:flutter/material.dart';
@@ -49,8 +50,9 @@ class _BirthdayAppState extends State<BirthdayApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Proxima Nova'),
-      initialRoute: OnboardingPage.id,
+      initialRoute: SplashScreen.id,
       routes: {
+        SplashScreen.id: (context) => SplashScreen(),
         OnboardingPage.id: (context) => OnboardingPage(),
         LoginPage.id: (context) => LoginPage(),
         CreateAccount.id: (context) => CreateAccount(),
